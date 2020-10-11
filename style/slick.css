@@ -104,17 +104,19 @@
 .slick-prev,
 .slick-next {
   position: absolute;
-  width: 25px;
-  height: 34px;
+  width: 31px;
+  height: 62px;
   font-size: 0;
-  left: 0;
+  left: 10%;
   top: 50%;
   border: 0;
   cursor: pointer;
-  background: url('../images/prev.png') center no-repeat;
+  z-index: 9;
+  outline: none;
+  background: url('../assets/images/arrow-left.png') center no-repeat;
 }
 .slick-next {
   left: auto;
-  right: 0;
-  background: url('../images/next.png') center no-repeat;
+  right: 10%;
+  background: url('../assets/images/arrow-right.png') center no-repeat;
 }
