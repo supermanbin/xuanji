@@ -186,7 +186,15 @@ $transition-dur: 0.2s;
     }
   }
 }
+.banner {
+  position: relative;
+}
 
+.banner-item {
+  img {
+    width: 100%;
+  }
+}
 .banner-infos {
   position: absolute;
   width: 1000px;
@@ -610,6 +618,7 @@ $transition-dur: 0.2s;
       margin-bottom: 20px;
       &:first-child {
         position: relative;
+        margin-bottom: 30px;
       }
       &:first-child::after {
         position: absolute;
@@ -652,5 +661,212 @@ $transition-dur: 0.2s;
     margin-top: 15px;
     padding-top: 15px;
     border-top: 1px solid RGBA(124, 124, 124, 0.6);
+  }
+}
+
+// 产品介绍
+.product-banner {
+  width: 100%;
+  height: auto;
+  top: 20%;
+  h3 {
+    font-size: 53px;
+  }
+}
+.product-types {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 10%;
+
+  span {
+    display: inline-block;
+    width: 160px;
+    line-height: 40px;
+    border-radius: 40px;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    @include transition();
+    &:first-child {
+      margin-right: 40px;
+    }
+
+    &:hover,
+    &.active {
+      color: #fff;
+      background-color: RGBA(16, 140, 207, 0.8);
+    }
+  }
+}
+
+.wrapper--1200 {
+  width: 1200px;
+}
+.product-long-info {
+  flex-direction: column;
+  height: 414px;
+  margin: 75px 0 100px;
+  padding: 0 70px;
+  text-align: center;
+  background: url('../assets/images/bg04.png') center no-repeat;
+
+  p {
+    line-height: 2;
+  }
+
+  .scroll-down {
+    margin-top: 50px;
+    flex-direction: column;
+    i {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border: 1px solid;
+      border-color: transparent #000 #000 transparent;
+      transform: rotate(45deg) scale(0.8);
+      opacity: 0.5;
+      animation: scrollBar 1s linear infinite;
+
+      &:last-child {
+        margin-top: -20px;
+        animation-delay: 0.2s;
+      }
+    }
+  }
+}
+
+@keyframes scrollBar {
+  0% {
+    opacity: 0.8;
+    transform: rotate(45deg) scale(0.8);
+  }
+  50% {
+    opacity: 0.1;
+    transform: rotate(45deg) scale(0.8) translate(5px, 5px);
+  }
+  100% {
+    opacity: 0.8;
+    transform: rotate(45deg) scale(0.8);
+  }
+}
+
+.parameter-detail {
+  text-align: center;
+
+  h3 {
+    font-size: 38px;
+  }
+
+  & > p {
+    color: #848484;
+    line-height: 2;
+    margin: 10px 0 60px;
+  }
+
+  .parameter-list {
+    flex-wrap: wrap;
+    width: 1000px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+
+    img {
+      filter: invert(100%);
+    }
+
+    .parameter__item {
+      color: $text;
+      i {
+        border-color: rgba($color: #000000, $alpha: 0.4);
+        margin-bottom: 10px;
+
+        & + p {
+          color: $secendray;
+        }
+      }
+      p {
+        margin-top: 0;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+.product-advantage-detail {
+  & > h3 {
+    text-align: center;
+    font-size: 38px;
+    margin: 36px 0 42px;
+  }
+  img {
+    width: 100%;
+  }
+
+  .product-detail-infos {
+    margin-top: 85px;
+
+    .text {
+      flex: 1;
+      padding-right: 55px;
+      line-height: 2;
+      color: $secendray;
+
+      h3 {
+        font-size: 32px;
+        color: $text;
+      }
+    }
+    .img {
+      width: 732px;
+    }
+
+    &.flex-reverse {
+      flex-direction: row-reverse;
+
+      .text {
+        padding-right: 0;
+        padding-left: 55px;
+      }
+    }
+  }
+}
+
+.add-cooperation {
+  margin: 65px 0;
+  padding-top: 50px;
+  border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
+
+  .title {
+    color: #a8a8a8;
+    margin-bottom: 15px;
+  }
+
+  .contact {
+    width: 40%;
+    h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    p {
+      line-height: 2;
+      color: $secendray;
+    }
+  }
+
+  .go-cooperation {
+    a {
+      display: inline-block;
+      line-height: 40px;
+      width: 270px;
+      text-align: center;
+      background-color: $primary;
+      color: #fff;
+      @include transition();
+
+      &:hover {
+        background-color: RGBA(16, 140, 207, 0.9);
+      }
+    }
   }
 }
