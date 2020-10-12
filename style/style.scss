@@ -292,7 +292,7 @@ $transition-dur: 0.2s;
     color: white;
     text-align: center;
   }
-  .advantages__item {
+  @at-root .advantages__item {
     .icon {
       display: inline-block;
       width: 190px;
@@ -868,5 +868,207 @@ $transition-dur: 0.2s;
         background-color: RGBA(16, 140, 207, 0.9);
       }
     }
+  }
+}
+
+// 行业应用
+.industry-banner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  color: white;
+  @extend .#{$flex}-center;
+  flex-direction: column;
+
+  h3 {
+    font-size: 52px;
+  }
+  p {
+    line-height: 2;
+    margin: 10px 0 40px;
+    font-size: 22px;
+  }
+
+  a {
+    display: block;
+    width: 160px;
+    line-height: 40px;
+    border-radius: 40px;
+    background: rgba($color: #fff, $alpha: 0.8);
+    text-align: center;
+    color: $text;
+    font-size: 18px;
+    @include transition();
+    &:hover {
+      background: rgba($color: #fff, $alpha: 1);
+    }
+  }
+}
+
+.industry-header {
+  text-align: center;
+  margin: 65px 0 40px;
+
+  h3 {
+    font-size: 38px;
+  }
+}
+
+.industry-advantages__item {
+  text-align: center;
+
+  .icon {
+    width: 190px;
+    height: 130px;
+    background: #f5f4f5 url('../assets/images/icon1-1.png') center no-repeat;
+  }
+  .icon2 {
+    background-image: url('../assets/images/icon2-1.png');
+  }
+  .icon3 {
+    background-image: url('../assets/images/icon3-1.png');
+  }
+
+  h4 {
+    margin: 20px 0 0;
+  }
+  p {
+    margin-top: 10px;
+    line-height: 1.5;
+    color: #7d7d7d;
+  }
+}
+%pa {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.industry {
+  .industry-card--square {
+    width: 592px;
+    height: 592px;
+
+    &:nth-child(2n) {
+      margin-left: 15px;
+    }
+
+    &::after {
+      content: '';
+      @extend %pa;
+      background: -webkit-linear-gradient(
+        top,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 1%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 1%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66000000',GradientType=0 );
+    }
+
+    .detail {
+      @include transition();
+      @extend %pa;
+      color: #fff;
+      padding: 45px 30px;
+      z-index: 2;
+      background: rgba($color: #1b3a82, $alpha: 0);
+      transform: translateY(65%);
+
+      h4 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 2;
+      }
+      strong {
+        display: inline-block;
+        font-size: 18px;
+        margin: 20px 0;
+      }
+      .see-more {
+        display: inline-block;
+        width: 100px;
+        line-height: 32px;
+        border-radius: 32px;
+        font-size: 16px;
+        background: rgba($color: #fff, $alpha: 0.8);
+        color: $text;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .more {
+        opacity: 0;
+      }
+
+      .more-tab {
+        margin: 20px 0;
+        li {
+          margin-right: 10px;
+          font-size: 18px;
+          width: 146px;
+          line-height: 42px;
+          border-radius: 4px;
+          background: rgba($color: #fff, $alpha: 0.2);
+          text-align: center;
+          @include transition();
+
+          &:hover,
+          &.active {
+            color: rgba($color: #1b3a82, $alpha: 1);
+            background: rgba($color: #fff, $alpha: 1);
+          }
+        }
+      }
+
+      .more-tab-content {
+        overflow-y: auto;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      .detail {
+        transform: translateY(60%);
+      }
+    }
+    &:hover {
+      .detail {
+        transform: translateY(0);
+        background: rgba($color: #1b3a82, $alpha: 0.8);
+
+        & > p,
+        .see-more {
+          display: none;
+        }
+
+        .more {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.xuanji-advantage {
+  padding: 0 60px;
+  margin-top: 50px;
+}
+.xuanji-advantage__item {
+  text-align: center;
+  p {
+    margin-top: 20px;
+    color: #434343;
   }
 }
