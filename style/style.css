@@ -988,7 +988,7 @@
   color: #7d7d7d;
 }
 
-.industry .industry-card--square::after, .industry .industry-card--square .detail, .growing::before, .growing::after, .growing .growing-step__item::before {
+.industry .industry-card--square::after, .industry .industry-card--square .detail, .growing::before, .growing::after, .growing .growing-step__item::before, .cooperation-form .form-list li .check span {
   position: absolute;
   left: 0;
   top: 0;
@@ -1316,6 +1316,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 0;
 }
 
 .about-banner h3 {
@@ -1362,6 +1363,8 @@
   border-radius: 50px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all cubic-bezier(0, 0.65, 0.02, 1.02) 0.3s;
+  transition: all cubic-bezier(0, 0.65, 0.02, 1.02) 0.3s;
 }
 
 .growing .growing-step .slick-arrow::after {
@@ -1370,9 +1373,16 @@
   height: 15px;
   border: 1px solid;
   border-color: transparent #000 #000 transparent;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg) scale(0.8);
+          transform: rotate(-45deg) scale(0.8);
   content: '';
+  -webkit-transition: all cubic-bezier(0, 0.65, 0.02, 1.02) 0.3s;
+  transition: all cubic-bezier(0, 0.65, 0.02, 1.02) 0.3s;
+}
+
+.growing .growing-step .slick-arrow:hover::after {
+  -webkit-transform: rotate(-45deg) scale(1);
+          transform: rotate(-45deg) scale(1);
 }
 
 .growing .growing-step .slick-arrow.slick-prev {
@@ -1380,8 +1390,22 @@
 }
 
 .growing .growing-step .slick-arrow.slick-prev::after {
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
+  -webkit-transform: rotate(135deg) scale(0.8);
+          transform: rotate(135deg) scale(0.8);
+}
+
+.growing .growing-step .slick-arrow.slick-prev:hover::after {
+  -webkit-transform: rotate(135deg) scale(1);
+          transform: rotate(135deg) scale(1);
+}
+
+.growing .growing-step .slick-arrow.slick-disabled {
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.growing .growing-step .slick-arrow.slick-disabled::after {
+  opacity: 0.4;
 }
 
 .growing .growing-step__item {
@@ -1416,7 +1440,122 @@
   font-size: 14px;
 }
 
+.breadcrumb {
+  padding: 25px 0;
+  background: #f7f7f7;
+  margin-top: -10px;
+}
+
+.breadcrumb strong {
+  margin-right: 20px;
+}
+
+.breadcrumb a {
+  margin-left: 20px;
+  color: #888888;
+  display: inline-block;
+}
+
+.breadcrumb a:hover {
+  color: RGBA(16, 140, 207, 1);
+}
+
 .cooperation-form {
   margin: 50px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cooperation-form .form-list {
+  width: 620px;
+}
+
+.cooperation-form .form-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cooperation-form .form-list li:last-child {
+  border-bottom: 0 solid #000;
+}
+
+.cooperation-form .form-list li.active {
+  border-color: RGBA(16, 140, 207, 1);
+}
+
+.cooperation-form .form-list li input[type='text'] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 0;
+  outline: 0;
+  padding: 0 20px;
+}
+
+.cooperation-form .form-list li .check {
+  display: inline-block;
+  position: relative;
+  width: 110px;
+  height: 34px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+.cooperation-form .form-list li .check:nth-child(5n) {
+  margin-right: 0;
+}
+
+.cooperation-form .form-list li .check input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+}
+
+.cooperation-form .form-list li .check input:checked + span {
+  background: RGBA(16, 140, 207, 1);
+  color: white;
+  border-color: RGBA(16, 140, 207, 1);
+}
+
+.cooperation-form .form-list li .check span {
+  background: #f6f6f6;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+  vertical-align: middle;
+  font-size: 15px;
+  cursor: pointer;
+  line-height: 34px;
+  -webkit-transition: all cubic-bezier(0, 0.65, 0.02, 1.02) 0.3s;
+  transition: all cubic-bezier(0, 0.65, 0.02, 1.02) 0.3s;
+}
+
+.cooperation-form .form-list li .check span:hover {
+  background: RGBA(16, 140, 207, 1);
+  color: white;
+  border-color: RGBA(16, 140, 207, 1);
+}
+
+.cooperation-form .cooperation-action {
+  width: 100%;
+  text-align: center;
+}
+
+.cooperation-form .cooperation-action button {
+  background: RGBA(16, 140, 207, 1);
+  color: white;
+  width: 183px;
+  height: 46px;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */

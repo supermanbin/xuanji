@@ -20,11 +20,11 @@
         <nav class="nav flex-aic">
           <ul class="flex-aic">
             <li><a href="#">首页</a></li>
-            <li><a href="#" class="active">产品介绍</a></li>
+            <li><a href="#">产品介绍</a></li>
             <li><a href="#">行业应用</a></li>
             <li><a href="#">服务与支持</a></li>
             <li><a href="#">新闻资讯</a></li>
-            <li><a href="#">关于璇玑</a></li>
+            <li><a href="#" class="active">关于璇玑</a></li>
           </ul>
           <span class="wechat">
             <span><img src="./assets/images/qrcode.png" alt="" /></span>
@@ -43,7 +43,7 @@
         </div>
       </div>
       <div class="breadcrumb">
-        <div class="wrapper--1200">
+        <div class="wrapper">
           <strong>关于璇玑</strong>|<a href="#">企业介绍</a>
           <a href="#">成长历程</a>
           <a href="#">渠道合作</a>
@@ -51,7 +51,7 @@
       </div>
 
       <div class="product-advantage-detail">
-        <div class="wrapper wrapper--1200">
+        <div class="wrapper wrapper">
           <section class="product-detail-infos aic flex-jcb flex-reverse">
             <div class="text">
               <h3 class="gs_reveal">玑衡，王者正天文之器</h3>
@@ -94,14 +94,19 @@
                 个电机、2片桨叶低转速即可获得良好性能
               </p>
             </div>
-            <div class="img gs_reveal gs_reveal_fromLeft" style="width: 600px">
+            <div
+              id="aboutSlick"
+              class="img gs_reveal gs_reveal_fromLeft"
+              style="width: 600px"
+            >
+              <div><img src="./assets/images/img18.png" alt="" /></div>
               <div><img src="./assets/images/img18.png" alt="" /></div>
             </div>
           </section>
         </div>
       </div>
       <div class="growing">
-        <div class="wrapper--1200">
+        <div class="wrapper">
           <header>
             <strong>成长历程</strong>
           </header>
@@ -157,56 +162,138 @@
           </div>
         </div>
       </div>
-      <div class="wrapper--1200">
+      <div class="wrapper">
         <header>
           <strong style="font-size: 32px">渠道合作</strong>
         </header>
-        <section class="cooperation-form">
+        <section class="cooperation-form flex-jcb">
           <ul class="form-list">
-            <li><label></label><input type="text" /></li>
-            <li><label></label><input type="text" /></li>
-            <li><label></label><input type="text" /></li>
-            <li><label></label><input type="text" /></li>
-            <li><label class="just-title"></label></li>
+            <li><label>公司名称*</label><input type="text" /></li>
+            <li><label>您的姓名*</label><input type="text" /></li>
+            <li><label>联系电话*</label><input type="text" /></li>
+            <li><label class="just-title">公司所属行业(单选)*</label></li>
             <li>
               <label class="check"
-                ><input type="radio" name="" id="" /><span></span
-              ></label>
+                ><input type="radio" name="type" id="" /><span
+                  >影视娱乐</span
+                ></label
+              >
               <label class="check"
-                ><input type="radio" name="" id="" /><span></span
-              ></label>
+                ><input type="radio" name="type" id="" /><span
+                  >旅游</span
+                ></label
+              >
               <label class="check"
-                ><input type="radio" name="" id="" /><span></span
-              ></label>
+                ><input type="radio" name="type" id="" /><span
+                  >金融</span
+                ></label
+              >
               <label class="check"
-                ><input type="radio" name="" id="" /><span></span
-              ></label>
+                ><input type="radio" name="type" id="" /><span
+                  >互联网</span
+                ></label
+              >
               <label class="check"
-                ><input type="radio" name="" id="" /><span></span
-              ></label>
+                ><input type="radio" name="type" id="" /><span
+                  >摄影</span
+                ></label
+              >
               <label class="check"
-                ><input type="radio" name="" id="" /><span></span
-              ></label>
+                ><input type="radio" name="type" id="" /><span
+                  >汽车</span
+                ></label
+              >
               <label class="check"
-                ><input type="radio" name="" id="" /><span></span
-              ></label>
+                ><input type="radio" name="type" id="" /><span
+                  >硬件设备</span
+                ></label
+              >
               <label class="check"
-                ><input type="radio" name="" id="" /><span></span
-              ></label>
+                ><input type="radio" name="type" id="" /><span
+                  >广告</span
+                ></label
+              >
               <label class="check"
-                ><input type="radio" name="" id="" /><span></span
-              ></label>
+                ><input type="radio" name="type" id="" /><span
+                  >快消</span
+                ></label
+              >
               <label class="check"
-                ><input type="radio" name="" id="" /><span></span
-              ></label>
+                ><input type="radio" name="type" id="" /><span
+                  >视频</span
+                ></label
+              >
               <label class="check"
-                ><input type="radio" name="" id="" /><span></span
-              ></label>
+                ><input type="radio" name="type" id="" /><span
+                  >酒店</span
+                ></label
+              >
               <label class="check"
-                ><input type="radio" name="" id="" /><span></span
-              ></label>
+                ><input type="radio" name="type" id="" /><span
+                  >体育</span
+                ></label
+              >
+              <label class="check"
+                ><input type="radio" name="type" id="" /><span
+                  >政府/事业</span
+                ></label
+              >
+              <label class="check"
+                ><input type="radio" name="type" id="" /><span
+                  >地产</span
+                ></label
+              >
+              <label class="check"
+                ><input type="radio" name="type" id="" /><span
+                  >其他</span
+                ></label
+              >
             </li>
           </ul>
+          <ul class="form-list">
+            <li><label>您的职位</label><input type="text" /></li>
+            <li><label>联系邮箱</label><input type="text" /></li>
+            <li><label>联系电话*</label><input type="text" /></li>
+            <li><label class="just-title">合作需求类型(单选)*</label></li>
+            <li>
+              <label class="check"
+                ><input type="radio" name="name" id="" /><span
+                  >设备赞助</span
+                ></label
+              >
+              <label class="check"
+                ><input type="radio" name="name" id="" /><span
+                  >品牌合作</span
+                ></label
+              >
+              <label class="check"
+                ><input type="radio" name="name" id="" /><span
+                  >研发合作</span
+                ></label
+              >
+              <label class="check"
+                ><input type="radio" name="name" id="" /><span
+                  >销售合作</span
+                ></label
+              >
+              <label class="check"
+                ><input type="radio" name="name" id="" /><span
+                  >飞行支持</span
+                ></label
+              >
+              <label class="check"
+                ><input type="radio" name="name" id="" /><span
+                  >投资</span
+                ></label
+              >
+              <label class="check"
+                ><input type="radio" name="name" id="" /><span
+                  >其他</span
+                ></label
+              >
+            </li>
+          </ul>
+          <div class="cooperation-action"><button>提交信息</button></div>
         </section>
       </div>
     </main>
@@ -282,12 +369,20 @@
 
     <script>
       $(function () {
+        $('#aboutSlick').slick({
+          autoplay: true,
+          accessibility: false,
+          dots: true,
+          draggable: false,
+          arrows: false,
+        });
         $('.growing-step').slick({
           autoplay: false,
           accessibility: false,
           dots: false,
           draggable: false,
           arrows: true,
+          infinite: false,
           slidesToShow: 4,
           slidesToScroll: 4,
         });
