@@ -988,7 +988,7 @@
   color: #7d7d7d;
 }
 
-.industry .industry-card--square::after, .industry .industry-card--square .detail, .growing::before, .growing::after, .growing .growing-step__item::before, .cooperation-form .form-list li .check span {
+.industry .industry-card--square::after, .industry .industry-card--square .detail, .growing::before, .growing::after, .cooperation-form .form-list li .check span {
   position: absolute;
   left: 0;
   top: 0;
@@ -1354,15 +1354,17 @@
 }
 
 .growing .growing-step .slick-arrow {
-  top: -100px;
+  position: absolute;
+  top: 30px;
   left: auto;
-  right: 0;
+  right: 20%;
   background: #fff;
   height: 50px;
   width: 50px;
   border-radius: 50px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
   -webkit-transition: all cubic-bezier(0, 0.65, 0.02, 1.02) 0.3s;
   transition: all cubic-bezier(0, 0.65, 0.02, 1.02) 0.3s;
 }
@@ -1386,7 +1388,7 @@
 }
 
 .growing .growing-step .slick-arrow.slick-prev {
-  right: 80px;
+  right: 25%;
 }
 
 .growing .growing-step .slick-arrow.slick-prev::after {
@@ -1408,18 +1410,31 @@
   opacity: 0.4;
 }
 
-.growing .growing-step__item {
-  position: relative;
-  height: 200px;
+.growing .growing-step .scroll {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
-.growing .growing-step__item::before {
-  content: '';
-  background: url("../assets/images/curve.png") left center/100% repeat-x;
+.growing .growing-step__item {
+  position: relative;
+  background: url("../assets/images/curve.png") left top/100% repeat-x;
+}
+
+.growing .growing-step__item:nth-child(2n) {
+  background: url("../assets/images/curve3.png") left top/100% repeat-x;
+}
+
+.growing .growing-step__item:nth-child(2n) .text {
+  padding: 0px 30px 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 .growing .growing-step__item .text {
-  padding: 35px 30px 0;
+  padding: 74px 30px 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 .growing .growing-step__item h3 {

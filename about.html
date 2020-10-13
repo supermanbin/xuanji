@@ -110,7 +110,12 @@
           <header>
             <strong>成长历程</strong>
           </header>
-          <div class="growing-step">
+          
+        </div>
+        <div class="growing-step">
+          <span class="slick-arrow"></span>
+          <span class="slick-arrow slick-prev"></span>
+          <div class="scroll">
             <div class="growing-step__item">
               <div class="text">
                 <h3>2016年1月</h3>
@@ -160,6 +165,7 @@
               </div>
             </div>
           </div>
+          
         </div>
       </div>
       <div class="wrapper">
@@ -376,16 +382,16 @@
           draggable: false,
           arrows: false,
         });
-        $('.growing-step').slick({
-          autoplay: false,
-          accessibility: false,
-          dots: false,
-          draggable: false,
-          arrows: true,
-          infinite: false,
-          slidesToShow: 4,
-          slidesToScroll: 4,
-        });
+        // $('.growing-step').slick({
+        //   autoplay: false,
+        //   accessibility: false,
+        //   dots: false,
+        //   draggable: false,
+        //   arrows: true,
+        //   infinite: false,
+        //   slidesToShow: 5,
+        //   slidesToScroll: 5,
+        // });
 
         gsap.from('.parameter-detail h3', {
           opacity: 0,
