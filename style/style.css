@@ -1,4 +1,4 @@
-.flex, .flex-dc, .flex-dcr, .flex-dr, .flex-drr, .flex-fw, .flex-jce, .flex-jcc, .flex-jcb, .flex-jca, .flex-aie, .flex-aic, .flex-ais, .flex-center, .parameter__item i, .title-go, .industry-banner, .after-sale__tab-item {
+.flex, .flex-dc, .flex-dcr, .flex-dr, .flex-drr, .flex-fw, .flex-jce, .flex-jcc, .flex-jcb, .flex-jca, .flex-aie, .flex-aic, .flex-ais, .flex-center, .parameter__item i, .title-go, .industry-banner, .after-sale__tab-item, .growing .growing-step .slick-arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,7 +45,7 @@
       justify-content: flex-end;
 }
 
-.jcc, .flex-jcc, .flex-center, .parameter__item i, .title-go, .industry-banner, .after-sale__tab-item {
+.jcc, .flex-jcc, .flex-center, .parameter__item i, .title-go, .industry-banner, .after-sale__tab-item, .growing .growing-step .slick-arrow {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
       justify-content: center;
@@ -69,7 +69,7 @@
       align-items: flex-end;
 }
 
-.aic, .flex-aic, .flex-center, .parameter__item i, .title-go, .industry-banner, .after-sale__tab-item {
+.aic, .flex-aic, .flex-center, .parameter__item i, .title-go, .industry-banner, .after-sale__tab-item, .growing .growing-step .slick-arrow {
   -webkit-box-align: center;
   -ms-flex-align: center;
       align-items: center;
@@ -697,7 +697,8 @@
 }
 
 .wrapper--1200 {
-  width: 1200px;
+  margin: 0 auto;
+  width: 1200px !important;
 }
 
 .product-long-info {
@@ -987,7 +988,7 @@
   color: #7d7d7d;
 }
 
-.industry .industry-card--square::after, .industry .industry-card--square .detail {
+.industry .industry-card--square::after, .industry .industry-card--square .detail, .growing::before, .growing::after, .growing .growing-step__item::before {
   position: absolute;
   left: 0;
   top: 0;
@@ -1302,5 +1303,120 @@
   background: RGBA(16, 140, 207, 1);
   content: '';
   margin-right: 10px;
+}
+
+.about-banner {
+  width: 1000px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-banner h3 {
+  font-size: 28px;
+}
+
+.about-banner p {
+  margin: 0;
+  font-size: 14px;
+  max-width: 380px;
+}
+
+.growing {
+  margin: 70px 0;
+  position: relative;
+  height: 462px;
+  padding: 30px 0;
+  background: #f5f4f5 url("../assets/images/curve2.png") left center/25% repeat-x;
+}
+
+.growing::before, .growing::after {
+  content: '';
+}
+
+.growing::before {
+  background: url("../assets/images/curve2.png") 50% center/25% repeat-x;
+}
+
+.growing header strong {
+  font-size: 32px;
+}
+
+.growing .growing-step {
+  margin-top: 5%;
+}
+
+.growing .growing-step .slick-arrow {
+  top: -100px;
+  left: auto;
+  right: 0;
+  background: #fff;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.growing .growing-step .slick-arrow::after {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid;
+  border-color: transparent #000 #000 transparent;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  content: '';
+}
+
+.growing .growing-step .slick-arrow.slick-prev {
+  right: 80px;
+}
+
+.growing .growing-step .slick-arrow.slick-prev::after {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.growing .growing-step__item {
+  position: relative;
+  height: 200px;
+}
+
+.growing .growing-step__item::before {
+  content: '';
+  background: url("../assets/images/curve.png") left center/100% repeat-x;
+}
+
+.growing .growing-step__item .text {
+  padding: 35px 30px 0;
+}
+
+.growing .growing-step__item h3 {
+  text-align: center;
+}
+
+.growing .growing-step__item h3::after {
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: 10px auto 20px;
+  content: '';
+  background: url("../assets/images/growing-circle.png") center no-repeat;
+}
+
+.growing .growing-step__item p {
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.cooperation-form {
+  margin: 50px 0;
 }
 /*# sourceMappingURL=style.css.map */

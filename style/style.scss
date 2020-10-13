@@ -704,7 +704,8 @@ $transition-dur: 0.2s;
 }
 
 .wrapper--1200 {
-  width: 1200px;
+  margin: 0 auto;
+  width: 1200px !important;
 }
 .product-long-info {
   flex-direction: column;
@@ -1267,4 +1268,113 @@ $transition-dur: 0.2s;
       margin-right: 10px;
     }
   }
+}
+
+// 关于
+.about-banner {
+  width: 1000px;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: flex-start;
+  justify-content: center;
+
+  h3 {
+    font-size: 28px;
+  }
+  p {
+    margin: 0;
+    font-size: 14px;
+    max-width: 380px;
+  }
+}
+
+.growing {
+  margin: 70px 0;
+  position: relative;
+  height: 462px;
+  padding: 30px 0;
+  background: #f5f4f5 url('../assets/images/curve2.png') left center/25%
+    repeat-x;
+  &::before,
+  &::after {
+    @extend %pa;
+    content: '';
+  }
+  &::before {
+    background: url('../assets/images/curve2.png') 50% center/25% repeat-x;
+  }
+
+  // &::after {
+  //   background: url('../assets/images/curve.png') left center/40% repeat-x;
+  // }
+
+  header {
+    strong {
+      font-size: 32px;
+    }
+  }
+
+  .growing-step {
+    margin-top: 5%;
+    .slick-arrow {
+      top: -100px;
+      left: auto;
+      right: 0;
+      background: #fff;
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+      box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+      @extend .#{$flex}-center;
+      &::after {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border: 1px solid;
+        border-color: transparent #000 #000 transparent;
+        transform: rotate(-45deg);
+        content: '';
+      }
+
+      &.slick-prev {
+        right: 80px;
+        &::after {
+          transform: rotate(135deg);
+        }
+      }
+    }
+  }
+
+  .growing-step__item {
+    position: relative;
+    height: 200px;
+    &::before {
+      @extend %pa;
+      content: '';
+      background: url('../assets/images/curve.png') left center/100% repeat-x;
+    }
+
+    .text {
+      padding: 35px 30px 0;
+    }
+    h3 {
+      text-align: center;
+      &::after {
+        display: block;
+        width: 26px;
+        height: 26px;
+        margin: 10px auto 20px;
+        content: '';
+        background: url('../assets/images/growing-circle.png') center no-repeat;
+      }
+    }
+    p {
+      line-height: 1.5;
+      font-size: 14px;
+    }
+  }
+}
+
+.cooperation-form {
+  margin: 50px 0;
 }
