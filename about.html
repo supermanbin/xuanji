@@ -106,17 +106,19 @@
         </div>
       </div>
       <div class="growing">
-        <div class="wrapper">
+        <div class="wrapper flex-jcb">
           <header>
             <strong>成长历程</strong>
           </header>
-          
+          <div class="control flex-aic">
+            <span class="slick-arrow arrow-click slick-prev"></span>
+            <span class="slick-arrow arrow-click"></span>
+          </div>
         </div>
         <div class="growing-step">
-          <span class="slick-arrow"></span>
-          <span class="slick-arrow slick-prev"></span>
           <div class="scroll">
             <div class="growing-step__item">
+              <img src="./assets/images/curve3.png" alt="" />
               <div class="text">
                 <h3>2016年1月</h3>
                 <p>
@@ -125,6 +127,7 @@
               </div>
             </div>
             <div class="growing-step__item">
+              <img src="./assets/images/curve.png" alt="" />
               <div class="text">
                 <h3>2016年2月</h3>
                 <p>
@@ -133,6 +136,7 @@
               </div>
             </div>
             <div class="growing-step__item">
+              <img src="./assets/images/curve3.png" alt="" />
               <div class="text">
                 <h3>2016年3月</h3>
                 <p>
@@ -141,6 +145,7 @@
               </div>
             </div>
             <div class="growing-step__item">
+              <img src="./assets/images/curve.png" alt="" />
               <div class="text">
                 <h3>2016年4月</h3>
                 <p>
@@ -149,6 +154,7 @@
               </div>
             </div>
             <div class="growing-step__item">
+              <img src="./assets/images/curve3.png" alt="" />
               <div class="text">
                 <h3>2016年5月</h3>
                 <p>
@@ -156,16 +162,11 @@
                 </p>
               </div>
             </div>
+            <!-- 此处必须留一个空growing-step__item, 否则曲线不完整 -->
             <div class="growing-step__item">
-              <div class="text">
-                <h3>2016年6月</h3>
-                <p>
-                  发展历程介绍文字发展历程介绍文字发展历程介绍文字发展历程介绍文字发展历程介绍文字
-                </p>
-              </div>
+              <img src="./assets/images/curve.png" alt="" />
             </div>
           </div>
-          
         </div>
       </div>
       <div class="wrapper">
@@ -375,12 +376,23 @@
 
     <script>
       $(function () {
-        $('#aboutSlick').slick({
-          autoplay: true,
-          accessibility: false,
-          dots: true,
-          draggable: false,
-          arrows: false,
+        var i = 0;
+        var len =
+          $('.growing-step__item').size() -
+          window.document.documentElement.clientWidth / 415;
+        $('.arrow-click').on('click', function () {
+          if ($(this).hasClass('slick-prev')) {
+            if (i > 0) {
+              i -= 1;
+            }
+          } else {
+            if (i < parseInt(len)) {
+              i += 1;
+            }
+          }
+          gsap.to('.scroll', {
+            translateX: -425 * i,
+          });
         });
         // $('.growing-step').slick({
         //   autoplay: false,
@@ -390,9 +402,15 @@
         //   arrows: true,
         //   infinite: false,
         //   slidesToShow: 5,
-        //   slidesToScroll: 5,
+        //   slidesToScroll: 1,
         // });
-
+        $('#aboutSlick').slick({
+          autoplay: true,
+          accessibility: false,
+          dots: true,
+          draggable: false,
+          arrows: false,
+        });
         gsap.from('.parameter-detail h3', {
           opacity: 0,
           translateY: 10,

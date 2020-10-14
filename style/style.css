@@ -1,4 +1,4 @@
-.flex, .flex-dc, .flex-dcr, .flex-dr, .flex-drr, .flex-fw, .flex-jce, .flex-jcc, .flex-jcb, .flex-jca, .flex-aie, .flex-aic, .flex-ais, .flex-center, .parameter__item i, .title-go, .industry-banner, .after-sale__tab-item, .growing .growing-step .slick-arrow {
+.flex, .flex-dc, .flex-dcr, .flex-dr, .flex-drr, .flex-fw, .flex-jce, .flex-jcc, .flex-jcb, .flex-jca, .flex-aie, .flex-aic, .flex-ais, .flex-center, .parameter__item i, .title-go, .industry-banner, .after-sale__tab-item, .growing .slick-arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,7 +45,7 @@
       justify-content: flex-end;
 }
 
-.jcc, .flex-jcc, .flex-center, .parameter__item i, .title-go, .industry-banner, .after-sale__tab-item, .growing .growing-step .slick-arrow {
+.jcc, .flex-jcc, .flex-center, .parameter__item i, .title-go, .industry-banner, .after-sale__tab-item, .growing .slick-arrow {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
       justify-content: center;
@@ -69,7 +69,7 @@
       align-items: flex-end;
 }
 
-.aic, .flex-aic, .flex-center, .parameter__item i, .title-go, .industry-banner, .after-sale__tab-item, .growing .growing-step .slick-arrow {
+.aic, .flex-aic, .flex-center, .parameter__item i, .title-go, .industry-banner, .after-sale__tab-item, .growing .slick-arrow {
   -webkit-box-align: center;
   -ms-flex-align: center;
       align-items: center;
@@ -1349,15 +1349,7 @@
   font-size: 32px;
 }
 
-.growing .growing-step {
-  margin-top: 5%;
-}
-
-.growing .growing-step .slick-arrow {
-  position: absolute;
-  top: 30px;
-  left: auto;
-  right: 20%;
+.growing .slick-arrow {
   background: #fff;
   height: 50px;
   width: 50px;
@@ -1365,11 +1357,12 @@
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 2;
+  cursor: pointer;
   -webkit-transition: all cubic-bezier(0, 0.65, 0.02, 1.02) 0.3s;
   transition: all cubic-bezier(0, 0.65, 0.02, 1.02) 0.3s;
 }
 
-.growing .growing-step .slick-arrow::after {
+.growing .slick-arrow::after {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -1382,32 +1375,39 @@
   transition: all cubic-bezier(0, 0.65, 0.02, 1.02) 0.3s;
 }
 
-.growing .growing-step .slick-arrow:hover::after {
+.growing .slick-arrow:hover::after {
   -webkit-transform: rotate(-45deg) scale(1);
           transform: rotate(-45deg) scale(1);
 }
 
-.growing .growing-step .slick-arrow.slick-prev {
-  right: 25%;
+.growing .slick-arrow.slick-prev {
+  position: initial;
+  margin-right: 20px;
 }
 
-.growing .growing-step .slick-arrow.slick-prev::after {
+.growing .slick-arrow.slick-prev::after {
   -webkit-transform: rotate(135deg) scale(0.8);
           transform: rotate(135deg) scale(0.8);
 }
 
-.growing .growing-step .slick-arrow.slick-prev:hover::after {
+.growing .slick-arrow.slick-prev:hover::after {
   -webkit-transform: rotate(135deg) scale(1);
           transform: rotate(135deg) scale(1);
 }
 
-.growing .growing-step .slick-arrow.slick-disabled {
+.growing .slick-arrow.slick-disabled {
   -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
 }
 
-.growing .growing-step .slick-arrow.slick-disabled::after {
+.growing .slick-arrow.slick-disabled::after {
   opacity: 0.4;
+}
+
+.growing .growing-step {
+  padding: 8% 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .growing .growing-step .scroll {
@@ -1418,23 +1418,21 @@
 
 .growing .growing-step__item {
   position: relative;
-  background: url("../assets/images/curve.png") left top/100% repeat-x;
-}
-
-.growing .growing-step__item:nth-child(2n) {
-  background: url("../assets/images/curve3.png") left top/100% repeat-x;
 }
 
 .growing .growing-step__item:nth-child(2n) .text {
-  padding: 0px 30px 0;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
+  -webkit-transform: translate(50%, 70%);
+          transform: translate(50%, 70%);
 }
 
 .growing .growing-step__item .text {
-  padding: 74px 30px 0;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
+  position: absolute;
+  width: 70%;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  -webkit-transform: translate(50%, -35%);
+          transform: translate(50%, -35%);
 }
 
 .growing .growing-step__item h3 {
