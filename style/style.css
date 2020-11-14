@@ -198,6 +198,7 @@
   height: 4px;
   background: RGBA(213, 213, 213, 1);
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .slick-dots li button {
@@ -241,7 +242,12 @@
 .production-video .description {
   width: 430px;
   line-height: 2;
-  padding: 40px;
+  padding: 10px 40px 20px 40px;
+  font-size: 16px;
+}
+.production-video .description p {
+	display: block;
+	padding-bottom: 10px;
 }
 
 .production-video .video {
@@ -261,12 +267,29 @@
   text-align: center;
 }
 
+.advantages__item div a { 
+	display: block;
+	background-color: RGBA(16, 140, 207, 0.3);
+	transition: all ease-in-out .3s;
+	cursor: pointer;
+	width: 190px;
+    height: 161px;
+}
+.advantages__item div a:hover { 
+	background-color: RGBA(16, 140, 207, 0.6);
+}
 .advantages__item .icon {
   display: inline-block;
   width: 190px;
   height: 161px;
   border-radius: 10px;
-  background: RGBA(16, 140, 207, 0.3) url("../assets/images/icon1.png") center no-repeat;
+  background-color: RGBA(16, 140, 207, 0.3);
+  background-position:center center;
+  background-repeat: no-repeat;
+}
+
+.advantages__item .icon1 {
+  background-image: url("../assets/images/icon1.png");
 }
 
 .advantages__item .icon2 {
@@ -292,6 +315,7 @@
 .advantages__item p {
   margin-top: 20px;
   line-height: 2;
+  font-size: 16px;
 }
 
 .industry {
@@ -401,6 +425,10 @@
   border-radius: 54px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   margin-bottom: 20px;
+  transition: all ease-in-out .3s;
+}
+.parameter__item i:hover {
+  border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .parameter__item p {
@@ -533,6 +561,7 @@
   visibility: visible;
   -webkit-transform: scale(1);
           transform: scale(1);
+  transition: all ease-in-out .4s;
 }
 
 .read-more {
@@ -708,13 +737,15 @@
           flex-direction: column;
   height: 414px;
   margin: 75px 0 100px;
-  padding: 0 70px;
+  padding: 0 60px;
   text-align: center;
   background: url("../assets/images/bg04.png") center no-repeat;
 }
 
 .product-long-info p {
-  line-height: 2;
+  line-height: 45px;
+	font-size: 19px;
+	color: #333333;
 }
 
 .product-long-info .scroll-down {
@@ -845,10 +876,12 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding-right: 55px;
+  padding-right: 65px;
   line-height: 2;
   color: #666;
 }
+.product-advantage-detail .product-detail-infos .text .product_p {font-size:18px; color:#686868;}
+.product-advantage-detail .product-detail-infos .text .about_p {font-size:16px; color:#333;line-height: 31px;}
 
 .product-advantage-detail .product-detail-infos .text h3 {
   font-size: 32px;
@@ -931,7 +964,7 @@
 .industry-banner p {
   line-height: 2;
   margin: 10px 0 40px;
-  font-size: 22px;
+  font-size: 16px;
 }
 
 .industry-banner a {
@@ -1431,8 +1464,9 @@
   right: 0;
   top: 0;
   z-index: 2;
-  -webkit-transform: translate(50%, -35%);
-          transform: translate(50%, -35%);
+	text-align: center;
+  -webkit-transform: translate(50%, -30%);
+          transform: translate(50%, -30%);
 }
 
 .growing .growing-step__item h3 {
